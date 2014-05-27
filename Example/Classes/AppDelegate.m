@@ -30,13 +30,19 @@
      [[TattleControl sharedControl] assignMailSubject:@"Bugs"];
      
      //Optionally change colors:
+     //Change spot image color according to app theme, default is blue
+     [[TattleControl sharedControl] changeSpotImageColor:YOUR_Color];
+     
+     //If you don't like spot image, you can also set your own image too.
+     [[TattleControl sharedControl] setSpotButtonImage:YOUR_Image];
+     
      //Change Scribble Color according to background, default is black
      [[TattleControl sharedControl] setScribbleColor:YOUR_Color];
      
      //Change background color of movable control. default is black(transparent)
      [[TattleControl sharedControl] setMovableControlBackgroundColor:YOUR_Color];
      [[TattleControl sharedControl] setMovableControlBackgroundColor:YOUR_Color withAlpha:alpha];
-
+     
      */
     self.window.backgroundColor = [UIColor whiteColor];
     FirstVC *firstVC = [[FirstVC alloc]init];
