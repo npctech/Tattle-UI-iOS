@@ -21,15 +21,17 @@ Tattle provides tester to send them in Email.
 # Integration steps
 
 In two ways you can get Tattle-UI
+
 1. From github 
-a. Download the code from github and include the files into your project. 
-b. Include following frameworks
+1.1 Download the code from github and include the files into your project. 
+1.2 Include following frameworks
 - OpenGLES.framework
 - QuartzCore.framework
 - AVFoundation.framework
 - CoreGraphics.framework
 - MessageUI.framework
 - ImageIO.framework  
+
 2. From cocoapod
 a. Add pod 'TattleUI' to your Podfile and run pod install
 
