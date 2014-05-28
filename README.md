@@ -23,8 +23,8 @@ Tattle provides tester to send them in Email.
 In two ways you can get Tattle-UI
 
 ## From github 
-1 Download the code from github and include the files into your project. 
-2 Include following frameworks
+1. Download the code from github and include the files into your project. 
+2. Include following frameworks
 ```
  OpenGLES.framework
  QuartzCore.framework
