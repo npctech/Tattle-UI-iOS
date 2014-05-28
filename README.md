@@ -22,18 +22,20 @@ Tattle provides tester to send them in Email.
 
 In two ways you can get Tattle-UI
 
-1. From github 
-1.1 Download the code from github and include the files into your project. 
-1.2 Include following frameworks
-- OpenGLES.framework
-- QuartzCore.framework
-- AVFoundation.framework
-- CoreGraphics.framework
-- MessageUI.framework
-- ImageIO.framework  
+## From github 
+1 Download the code from github and include the files into your project. 
+2 Include following frameworks
+```
+ OpenGLES.framework
+ QuartzCore.framework
+ AVFoundation.framework
+ CoreGraphics.framework
+ MessageUI.framework
+ ImageIO.framework  
+```
 
-2. From cocoapod
-a. Add pod 'TattleUI' to your Podfile and run pod install
+## From cocoapod
+a. Add pod 'TattleUI' to your Podfile and run "pod install"
 
 # Usage
 1. Import "UIController+SnapShotButton.h" file into App-Prefix.pch file 
