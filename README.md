@@ -18,13 +18,10 @@ Tattle library takes the snapshot of the current screen and allow the tester
 to mark problematic section using scribbles. Tester may wish to add a audio note along with this. 
 Tattle provides tester to send them in Email. We use [anypic app](https://github.com/ParsePlatform/Anypic) to demo this control.
 
-<p>
-  <img src="http://imageshack.com/a/img841/7874/95fa.png" alt="Tattle-UI" title="Tattle-UI">
-  <img src="http://imageshack.com/a/img834/3107/iq33.png" alt="Tattle-UI" title="Tattle-UI">
-  <img src="http://imageshack.com/a/img842/9492/urw0.png" alt="Tattle-UI" title="Tattle-UI">
-  <img src="http://imageshack.com/a/img842/3509/8igl.png" alt="Tattle-UI" title="Tattle-UI">
-</p>
-
+[![](http://imagizer.imageshack.us/v2/640x480q90/841/95fa.png)](http://imageshack.com/a/img841/7874/95fa.png)
+[![](http://imagizer.imageshack.us/v2/640x480q90/834/iq33.png)](http://imageshack.com/a/img834/3107/iq33.png)
+[![](http://imagizer.imageshack.us/v2/640x480q90/844/xtci.png)](http://imageshack.com/a/img844/915/xtci.png)
+[![](http://imagizer.imageshack.us/v2/640x480q90/836/9kqe.png)](http://imageshack.com/a/img836/9691/9kqe.png)
 
 # Integration steps
 
@@ -74,6 +71,7 @@ self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 ## Limitation
 
 - Only supported for **portrait** orientation. 
+- Audio recording supports only **2 minutes**.
 
 # Optional Configuration
 
