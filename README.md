@@ -16,21 +16,22 @@ After integration, Tattle library adds a floating button on every screen.
 Tester can click on this button whenever he sees some issue with the UI.
 Tattle library takes the snapshot of the current screen and allow the tester
 to mark problematic section using scribbles. Tester may wish to add a audio note along with this. 
-Tattle provides tester to send them in Email. 
+Tattle provides tester to send them in Email. We use [anypic app](https://github.com/ParsePlatform/Anypic) to demo this control.
 
-<p align="center" >
-  <img src="http://imageshack.com/a/img845/1851/2z5.gif" alt="Tattle-UI" title="Tattle-UI">
+<p>
+  <img src="http://imageshack.com/a/img841/7874/95fa.png" alt="Tattle-UI" title="Tattle-UI">
+  <img src="http://imageshack.com/a/img834/3107/iq33.png" alt="Tattle-UI" title="Tattle-UI">
+  <img src="http://imageshack.com/a/img842/9492/urw0.png" alt="Tattle-UI" title="Tattle-UI">
+  <img src="http://imageshack.com/a/img842/3509/8igl.png" alt="Tattle-UI" title="Tattle-UI">
 </p>
 
 
 # Integration steps
 
-In two ways you can get Tattle-UI
-
 ## From github 
-1. Download the code from github and include the files into your project. 
-2. Include following frameworks
-```
+* Download the code from github and include the files into your project. 
+* Include following frameworks
+```ruby
  OpenGLES.framework
  QuartzCore.framework
  AVFoundation.framework
@@ -38,29 +39,30 @@ In two ways you can get Tattle-UI
  MessageUI.framework
  ImageIO.framework  
 ```
-
-## Usage
-
-1. Import "UIController+SnapShotButton.h" file into App-Prefix.pch file. `#import "UIController+SnapShotButton.h"`
-2. Enable Tattle control by adding below line in "AppDelegate.m".
-`#import "TattleControl.h"`
-3. Invoke 'enableTattleToWindow:' method, after main window creation.
-
-```
+* Import "UIController+SnapShotButton.h" file into App-Prefix.pch file. `#import "UIController+SnapShotButton.h"`
+* Enable Tattle control by adding below line in "AppDelegate.m".`#import "TattleControl.h"`
+* Invoke 'enableTattleToWindow:' method, after main window creation.
+```ruby
 self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
 [[TattleControl sharedControl] enableTattleToWindow:self.window]; 
 ```
-## Installation with Cocoapods.
+## With Cocoapods.
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries, [Getting started here](http://guides.cocoapods.org/using/getting-started.html)
-
-## Podfile
-
+* Podfile 
 ```ruby
 platform :ios, '6.0'
 pod 'Tattle-UI-iOS', '~> 1.0.1'
 ```
-After pod get install, follow **usage** step from #2
+* Enable Tattle control by adding below line in "AppDelegate.m".
+`#import "TattleControl.h"`
+* Invoke 'enableTattleToWindow:' method, after main window creation.
+```ruby
+self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
+[[TattleControl sharedControl] enableTattleToWindow:self.window]; 
+```
+### Notes
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries, [Getting started here](http://guides.cocoapods.org/using/getting-started.html)
 
 ## Requirment 
 
