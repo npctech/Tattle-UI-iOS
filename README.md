@@ -4,24 +4,24 @@
 ## Why do you need Tattle-UI
 
 As a developer, we struggle to understand and reproduce few UI
-bugs reported by the beta-tester. In tester's point of view, tester
+bugs reported by the tester. In tester's point of view, tester
 writes paragraphs to explain a simple UI misalignment when they test.
 
-Tattle-UI solves this problem by providing simpler mechanism to get UI feedback
-from beta-testers. 
+Tattle-UI solves this problem by providing a simple mechanism to get UI feedback
+from testers. 
 
 ## What do you see on your app
 
-After integration, Tattle library adds a floating button on every screen. 
+After integration, Tattle-UI library adds a floating button on every screen. 
 Tester can click on this button whenever he sees some issue with the UI.
-Tattle library takes the snapshot of the current screen and allow the tester
+Tattle-UI library takes the snapshot of the current screen and allow the tester
 to mark problematic section using scribbles. Tester may wish to add a audio note along with this. 
-Tattle provides tester to send them in Email. We use [anypic app](https://github.com/ParsePlatform/Anypic) to demo this control.
+Tattle-UI provides tester to send them in Email. We use [anypic app](https://github.com/ParsePlatform/Anypic) to demo this control.
 
-[![](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/Thumbnail/ShotImage.png)](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/ShotImage.png)
-[![](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/Thumbnail/Scribble.png)](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/Scribble.png)
-[![](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/Thumbnail/AudioRecordPlay.png)](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/AudioRecordPlay.png)
-[![](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/Thumbnail/ShareViaMail.png)](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/ShareViaMail.png)
+[![](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/Thumbnail/ShotImage.png)](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/ShotImage.png)
+[![](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/Thumbnail/Scribble.png)](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/Scribble.png)
+[![](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/Thumbnail/AudioRecordPlay.png)](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/AudioRecordPlay.png)
+[![](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/Thumbnail/ShareViaMail.png)](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/ShareViaMail.png)
 
 # Integration steps
 
@@ -37,7 +37,7 @@ Tattle provides tester to send them in Email. We use [anypic app](https://github
  ImageIO.framework  
 ```
 * Import "UIController+SnapShotButton.h" file into App-Prefix.pch file. `#import "UIController+SnapShotButton.h"`
-* Enable Tattle control by adding below line in "AppDelegate.m".`#import "TattleControl.h"`
+* Enable Tattle-UI control by adding below line in "AppDelegate.m".`#import "TattleControl.h"`
 * Invoke 'enableTattleToWindow:' method, after main window creation.
 ```ruby
 self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
@@ -50,7 +50,7 @@ self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 platform :ios, '6.0'
 pod 'Tattle-UI-iOS', '~> 1.0.1'
 ```
-* Enable Tattle control by adding below line in "AppDelegate.m".
+* Enable Tattle-UI control by adding below line in "AppDelegate.m".
 `#import "TattleControl.h"`
 * Invoke 'enableTattleToWindow:' method, after main window creation.
 ```ruby
