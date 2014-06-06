@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CAFA3571941EAD100C14A7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA34C1941EAD100C14A7D /* AppDelegate.swift */; };
+		3CAFA3581941EAD100C14A7D /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA34E1941EAD100C14A7D /* FirstVC.swift */; };
+		3CAFA3591941EAD100C14A7D /* FirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA34F1941EAD100C14A7D /* FirstVC.xib */; };
+		3CAFA35A1941EAD100C14A7D /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA3511941EAD100C14A7D /* SecondVC.swift */; };
+		3CAFA35B1941EAD100C14A7D /* SecondVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3521941EAD100C14A7D /* SecondVC.xib */; };
+		3CAFA35C1941EAD100C14A7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3541941EAD100C14A7D /* Images.xcassets */; };
+		3CAFA38F1941EAE400C14A7D /* MovableEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA3611941EAE400C14A7D /* MovableEditorView.m */; };
+		3CAFA3901941EAE400C14A7D /* MovableEditorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3621941EAE400C14A7D /* MovableEditorView.xib */; };
+		3CAFA3911941EAE400C14A7D /* MovableEditorViewiPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3631941EAE400C14A7D /* MovableEditorViewiPad.xib */; };
+		3CAFA3921941EAE400C14A7D /* gif_3D.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3651941EAE400C14A7D /* gif_3D.gif */; };
+		3CAFA3931941EAE400C14A7D /* play@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3661941EAE400C14A7D /* play@2x~ipad.png */; };
+		3CAFA3941941EAE400C14A7D /* play@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3671941EAE400C14A7D /* play@2x~iphone.png */; };
+		3CAFA3951941EAE400C14A7D /* play~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3681941EAE400C14A7D /* play~ipad.png */; };
+		3CAFA3961941EAE400C14A7D /* play~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3691941EAE400C14A7D /* play~iphone.png */; };
+		3CAFA3971941EAE400C14A7D /* record@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA36A1941EAE400C14A7D /* record@2x~ipad.png */; };
+		3CAFA3981941EAE400C14A7D /* record@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA36B1941EAE400C14A7D /* record@2x~iphone.png */; };
+		3CAFA3991941EAE400C14A7D /* record~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA36C1941EAE400C14A7D /* record~ipad.png */; };
+		3CAFA39A1941EAE400C14A7D /* record~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA36D1941EAE400C14A7D /* record~iphone.png */; };
+		3CAFA39B1941EAE400C14A7D /* share@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA36E1941EAE400C14A7D /* share@2x~ipad.png */; };
+		3CAFA39C1941EAE400C14A7D /* share@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA36F1941EAE400C14A7D /* share@2x~iphone.png */; };
+		3CAFA39D1941EAE400C14A7D /* share~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3701941EAE400C14A7D /* share~ipad.png */; };
+		3CAFA39E1941EAE400C14A7D /* share~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3711941EAE400C14A7D /* share~iphone.png */; };
+		3CAFA39F1941EAE400C14A7D /* stop@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3721941EAE400C14A7D /* stop@2x~ipad.png */; };
+		3CAFA3A01941EAE400C14A7D /* stop@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3731941EAE400C14A7D /* stop@2x~iphone.png */; };
+		3CAFA3A11941EAE400C14A7D /* stop~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3741941EAE400C14A7D /* stop~ipad.png */; };
+		3CAFA3A21941EAE400C14A7D /* stop~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA3751941EAE400C14A7D /* stop~iphone.png */; };
+		3CAFA3A31941EAE400C14A7D /* Scribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA3771941EAE400C14A7D /* Scribble.m */; };
+		3CAFA3A41941EAE400C14A7D /* ScribbleEraseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA3791941EAE400C14A7D /* ScribbleEraseView.m */; };
+		3CAFA3A51941EAE400C14A7D /* ScribblePathPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA37B1941EAE400C14A7D /* ScribblePathPoint.m */; };
+		3CAFA3A61941EAE400C14A7D /* ScribCapControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA37D1941EAE400C14A7D /* ScribCapControl.m */; };
+		3CAFA3A71941EAE400C14A7D /* SnapShotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA37F1941EAE400C14A7D /* SnapShotView.m */; };
+		3CAFA3A81941EAE400C14A7D /* TattleControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA3811941EAE400C14A7D /* TattleControl.m */; };
+		3CAFA3A91941EAE400C14A7D /* TAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA3831941EAE400C14A7D /* TAudioManager.m */; };
+		3CAFA3AA1941EAE400C14A7D /* TConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA3851941EAE400C14A7D /* TConstants.m */; };
+		3CAFA3AB1941EAE400C14A7D /* TFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA3871941EAE400C14A7D /* TFileManager.m */; };
+		3CAFA3AC1941EAE400C14A7D /* TPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA3891941EAE400C14A7D /* TPopupView.m */; };
+		3CAFA3AD1941EAE400C14A7D /* TPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFA38A1941EAE400C14A7D /* TPopupView.xib */; };
+		3CAFA3AE1941EAE400C14A7D /* UIController+SnapShotButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA38C1941EAE400C14A7D /* UIController+SnapShotButton.m */; };
+		3CAFA3AF1941EAE400C14A7D /* UIImage+GiffAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFA38E1941EAE400C14A7D /* UIImage+GiffAnimation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CAFA33C1941E9B000C14A7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CAFA3261941E9B000C14A7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CAFA32D1941E9B000C14A7D;
+			remoteInfo = "Tattle-UI-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3CAFA32E1941E9B000C14A7D /* Tattle-UI-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tattle-UI-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAFA33B1941E9B000C14A7D /* Tattle-UI-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tattle-UI-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAFA34C1941EAD100C14A7D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3CAFA34E1941EAD100C14A7D /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		3CAFA34F1941EAD100C14A7D /* FirstVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstVC.xib; sourceTree = "<group>"; };
+		3CAFA3511941EAD100C14A7D /* SecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		3CAFA3521941EAD100C14A7D /* SecondVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondVC.xib; sourceTree = "<group>"; };
+		3CAFA3541941EAD100C14A7D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3CAFA3551941EAD100C14A7D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CAFA3561941EAD100C14A7D /* Tattle-UI-Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tattle-UI-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		3CAFA35F1941EAE400C14A7D /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		3CAFA3601941EAE400C14A7D /* MovableEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovableEditorView.h; sourceTree = "<group>"; };
+		3CAFA3611941EAE400C14A7D /* MovableEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovableEditorView.m; sourceTree = "<group>"; };
+		3CAFA3621941EAE400C14A7D /* MovableEditorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovableEditorView.xib; sourceTree = "<group>"; };
+		3CAFA3631941EAE400C14A7D /* MovableEditorViewiPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovableEditorViewiPad.xib; sourceTree = "<group>"; };
+		3CAFA3651941EAE400C14A7D /* gif_3D.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif_3D.gif; sourceTree = "<group>"; };
+		3CAFA3661941EAE400C14A7D /* play@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x~ipad.png"; sourceTree = "<group>"; };
+		3CAFA3671941EAE400C14A7D /* play@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x~iphone.png"; sourceTree = "<group>"; };
+		3CAFA3681941EAE400C14A7D /* play~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play~ipad.png"; sourceTree = "<group>"; };
+		3CAFA3691941EAE400C14A7D /* play~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play~iphone.png"; sourceTree = "<group>"; };
+		3CAFA36A1941EAE400C14A7D /* record@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record@2x~ipad.png"; sourceTree = "<group>"; };
+		3CAFA36B1941EAE400C14A7D /* record@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record@2x~iphone.png"; sourceTree = "<group>"; };
+		3CAFA36C1941EAE400C14A7D /* record~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record~ipad.png"; sourceTree = "<group>"; };
+		3CAFA36D1941EAE400C14A7D /* record~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record~iphone.png"; sourceTree = "<group>"; };
+		3CAFA36E1941EAE400C14A7D /* share@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x~ipad.png"; sourceTree = "<group>"; };
+		3CAFA36F1941EAE400C14A7D /* share@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x~iphone.png"; sourceTree = "<group>"; };
+		3CAFA3701941EAE400C14A7D /* share~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share~ipad.png"; sourceTree = "<group>"; };
+		3CAFA3711941EAE400C14A7D /* share~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share~iphone.png"; sourceTree = "<group>"; };
+		3CAFA3721941EAE400C14A7D /* stop@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x~ipad.png"; sourceTree = "<group>"; };
+		3CAFA3731941EAE400C14A7D /* stop@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x~iphone.png"; sourceTree = "<group>"; };
+		3CAFA3741941EAE400C14A7D /* stop~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop~ipad.png"; sourceTree = "<group>"; };
+		3CAFA3751941EAE400C14A7D /* stop~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop~iphone.png"; sourceTree = "<group>"; };
+		3CAFA3761941EAE400C14A7D /* Scribble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scribble.h; sourceTree = "<group>"; };
+		3CAFA3771941EAE400C14A7D /* Scribble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scribble.m; sourceTree = "<group>"; };
+		3CAFA3781941EAE400C14A7D /* ScribbleEraseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleEraseView.h; sourceTree = "<group>"; };
+		3CAFA3791941EAE400C14A7D /* ScribbleEraseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleEraseView.m; sourceTree = "<group>"; };
+		3CAFA37A1941EAE400C14A7D /* ScribblePathPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribblePathPoint.h; sourceTree = "<group>"; };
+		3CAFA37B1941EAE400C14A7D /* ScribblePathPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribblePathPoint.m; sourceTree = "<group>"; };
+		3CAFA37C1941EAE400C14A7D /* ScribCapControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribCapControl.h; sourceTree = "<group>"; };
+		3CAFA37D1941EAE400C14A7D /* ScribCapControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribCapControl.m; sourceTree = "<group>"; };
+		3CAFA37E1941EAE400C14A7D /* SnapShotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapShotView.h; sourceTree = "<group>"; };
+		3CAFA37F1941EAE400C14A7D /* SnapShotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnapShotView.m; sourceTree = "<group>"; };
+		3CAFA3801941EAE400C14A7D /* TattleControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TattleControl.h; sourceTree = "<group>"; };
+		3CAFA3811941EAE400C14A7D /* TattleControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TattleControl.m; sourceTree = "<group>"; };
+		3CAFA3821941EAE400C14A7D /* TAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAudioManager.h; sourceTree = "<group>"; };
+		3CAFA3831941EAE400C14A7D /* TAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAudioManager.m; sourceTree = "<group>"; };
+		3CAFA3841941EAE400C14A7D /* TConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TConstants.h; sourceTree = "<group>"; };
+		3CAFA3851941EAE400C14A7D /* TConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TConstants.m; sourceTree = "<group>"; };
+		3CAFA3861941EAE400C14A7D /* TFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFileManager.h; sourceTree = "<group>"; };
+		3CAFA3871941EAE400C14A7D /* TFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFileManager.m; sourceTree = "<group>"; };
+		3CAFA3881941EAE400C14A7D /* TPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPopupView.h; sourceTree = "<group>"; };
+		3CAFA3891941EAE400C14A7D /* TPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPopupView.m; sourceTree = "<group>"; };
+		3CAFA38A1941EAE400C14A7D /* TPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPopupView.xib; sourceTree = "<group>"; };
+		3CAFA38B1941EAE400C14A7D /* UIController+SnapShotButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIController+SnapShotButton.h"; sourceTree = "<group>"; };
+		3CAFA38C1941EAE400C14A7D /* UIController+SnapShotButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIController+SnapShotButton.m"; sourceTree = "<group>"; };
+		3CAFA38D1941EAE400C14A7D /* UIImage+GiffAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GiffAnimation.h"; sourceTree = "<group>"; };
+		3CAFA38E1941EAE400C14A7D /* UIImage+GiffAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GiffAnimation.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CAFA32B1941E9B000C14A7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CAFA3381941E9B000C14A7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CAFA3251941E9B000C14A7D = {
+			isa = PBXGroup;
+			children = (
+				3CAFA34B1941EAD100C14A7D /* Classes */,
+				3CAFA3531941EAD100C14A7D /* SupportingFiles */,
+				3CAFA32F1941E9B000C14A7D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CAFA32F1941E9B000C14A7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CAFA32E1941E9B000C14A7D /* Tattle-UI-Swift.app */,
+				3CAFA33B1941E9B000C14A7D /* Tattle-UI-SwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CAFA34B1941EAD100C14A7D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3CAFA35E1941EAE400C14A7D /* TattleControl */,
+				3CAFA34D1941EAD100C14A7D /* FirstVC */,
+				3CAFA3501941EAD100C14A7D /* SecondVC */,
+				3CAFA34C1941EAD100C14A7D /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3CAFA34D1941EAD100C14A7D /* FirstVC */ = {
+			isa = PBXGroup;
+			children = (
+				3CAFA34E1941EAD100C14A7D /* FirstVC.swift */,
+				3CAFA34F1941EAD100C14A7D /* FirstVC.xib */,
+			);
+			path = FirstVC;
+			sourceTree = "<group>";
+		};
+		3CAFA3501941EAD100C14A7D /* SecondVC */ = {
+			isa = PBXGroup;
+			children = (
+				3CAFA3511941EAD100C14A7D /* SecondVC.swift */,
+				3CAFA3521941EAD100C14A7D /* SecondVC.xib */,
+			);
+			path = SecondVC;
+			sourceTree = "<group>";
+		};
+		3CAFA3531941EAD100C14A7D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3CAFA3541941EAD100C14A7D /* Images.xcassets */,
+				3CAFA3551941EAD100C14A7D /* Info.plist */,
+				3CAFA3561941EAD100C14A7D /* Tattle-UI-Swift-Bridging-Header.h */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3CAFA35E1941EAE400C14A7D /* TattleControl */ = {
+			isa = PBXGroup;
+			children = (
+				3CAFA35F1941EAE400C14A7D /* CommonMacro.h */,
+				3CAFA3601941EAE400C14A7D /* MovableEditorView.h */,
+				3CAFA3611941EAE400C14A7D /* MovableEditorView.m */,
+				3CAFA3621941EAE400C14A7D /* MovableEditorView.xib */,
+				3CAFA3631941EAE400C14A7D /* MovableEditorViewiPad.xib */,
+				3CAFA3641941EAE400C14A7D /* Resources */,
+				3CAFA3761941EAE400C14A7D /* Scribble.h */,
+				3CAFA3771941EAE400C14A7D /* Scribble.m */,
+				3CAFA3781941EAE400C14A7D /* ScribbleEraseView.h */,
+				3CAFA3791941EAE400C14A7D /* ScribbleEraseView.m */,
+				3CAFA37A1941EAE400C14A7D /* ScribblePathPoint.h */,
+				3CAFA37B1941EAE400C14A7D /* ScribblePathPoint.m */,
+				3CAFA37C1941EAE400C14A7D /* ScribCapControl.h */,
+				3CAFA37D1941EAE400C14A7D /* ScribCapControl.m */,
+				3CAFA37E1941EAE400C14A7D /* SnapShotView.h */,
+				3CAFA37F1941EAE400C14A7D /* SnapShotView.m */,
+				3CAFA3801941EAE400C14A7D /* TattleControl.h */,
+				3CAFA3811941EAE400C14A7D /* TattleControl.m */,
+				3CAFA3821941EAE400C14A7D /* TAudioManager.h */,
+				3CAFA3831941EAE400C14A7D /* TAudioManager.m */,
+				3CAFA3841941EAE400C14A7D /* TConstants.h */,
+				3CAFA3851941EAE400C14A7D /* TConstants.m */,
+				3CAFA3861941EAE400C14A7D /* TFileManager.h */,
+				3CAFA3871941EAE400C14A7D /* TFileManager.m */,
+				3CAFA3881941EAE400C14A7D /* TPopupView.h */,
+				3CAFA3891941EAE400C14A7D /* TPopupView.m */,
+				3CAFA38A1941EAE400C14A7D /* TPopupView.xib */,
+				3CAFA38B1941EAE400C14A7D /* UIController+SnapShotButton.h */,
+				3CAFA38C1941EAE400C14A7D /* UIController+SnapShotButton.m */,
+				3CAFA38D1941EAE400C14A7D /* UIImage+GiffAnimation.h */,
+				3CAFA38E1941EAE400C14A7D /* UIImage+GiffAnimation.m */,
+			);
+			name = TattleControl;
+			path = ../../TattleControl;
+			sourceTree = "<group>";
+		};
+		3CAFA3641941EAE400C14A7D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3CAFA3651941EAE400C14A7D /* gif_3D.gif */,
+				3CAFA3661941EAE400C14A7D /* play@2x~ipad.png */,
+				3CAFA3671941EAE400C14A7D /* play@2x~iphone.png */,
+				3CAFA3681941EAE400C14A7D /* play~ipad.png */,
+				3CAFA3691941EAE400C14A7D /* play~iphone.png */,
+				3CAFA36A1941EAE400C14A7D /* record@2x~ipad.png */,
+				3CAFA36B1941EAE400C14A7D /* record@2x~iphone.png */,
+				3CAFA36C1941EAE400C14A7D /* record~ipad.png */,
+				3CAFA36D1941EAE400C14A7D /* record~iphone.png */,
+				3CAFA36E1941EAE400C14A7D /* share@2x~ipad.png */,
+				3CAFA36F1941EAE400C14A7D /* share@2x~iphone.png */,
+				3CAFA3701941EAE400C14A7D /* share~ipad.png */,
+				3CAFA3711941EAE400C14A7D /* share~iphone.png */,
+				3CAFA3721941EAE400C14A7D /* stop@2x~ipad.png */,
+				3CAFA3731941EAE400C14A7D /* stop@2x~iphone.png */,
+				3CAFA3741941EAE400C14A7D /* stop~ipad.png */,
+				3CAFA3751941EAE400C14A7D /* stop~iphone.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CAFA32D1941E9B000C14A7D /* Tattle-UI-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CAFA3451941E9B000C14A7D /* Build configuration list for PBXNativeTarget "Tattle-UI-Swift" */;
+			buildPhases = (
+				3CAFA32A1941E9B000C14A7D /* Sources */,
+				3CAFA32B1941E9B000C14A7D /* Frameworks */,
+				3CAFA32C1941E9B000C14A7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tattle-UI-Swift";
+			productName = "Tattle-UI-Swift";
+			productReference = 3CAFA32E1941E9B000C14A7D /* Tattle-UI-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3CAFA33A1941E9B000C14A7D /* Tattle-UI-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CAFA3481941E9B000C14A7D /* Build configuration list for PBXNativeTarget "Tattle-UI-SwiftTests" */;
+			buildPhases = (
+				3CAFA3371941E9B000C14A7D /* Sources */,
+				3CAFA3381941E9B000C14A7D /* Frameworks */,
+				3CAFA3391941E9B000C14A7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CAFA33D1941E9B000C14A7D /* PBXTargetDependency */,
+			);
+			name = "Tattle-UI-SwiftTests";
+			productName = "Tattle-UI-SwiftTests";
+			productReference = 3CAFA33B1941E9B000C14A7D /* Tattle-UI-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CAFA3261941E9B000C14A7D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Tattle;
+				TargetAttributes = {
+					3CAFA32D1941E9B000C14A7D = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					3CAFA33A1941E9B000C14A7D = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 3CAFA32D1941E9B000C14A7D;
+					};
+				};
+			};
+			buildConfigurationList = 3CAFA3291941E9B000C14A7D /* Build configuration list for PBXProject "Tattle-UI-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3CAFA3251941E9B000C14A7D;
+			productRefGroup = 3CAFA32F1941E9B000C14A7D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CAFA32D1941E9B000C14A7D /* Tattle-UI-Swift */,
+				3CAFA33A1941E9B000C14A7D /* Tattle-UI-SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CAFA32C1941E9B000C14A7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CAFA3991941EAE400C14A7D /* record~ipad.png in Resources */,
+				3CAFA3961941EAE400C14A7D /* play~iphone.png in Resources */,
+				3CAFA39C1941EAE400C14A7D /* share@2x~iphone.png in Resources */,
+				3CAFA3971941EAE400C14A7D /* record@2x~ipad.png in Resources */,
+				3CAFA39E1941EAE400C14A7D /* share~iphone.png in Resources */,
+				3CAFA35C1941EAD100C14A7D /* Images.xcassets in Resources */,
+				3CAFA39F1941EAE400C14A7D /* stop@2x~ipad.png in Resources */,
+				3CAFA3941941EAE400C14A7D /* play@2x~iphone.png in Resources */,
+				3CAFA3911941EAE400C14A7D /* MovableEditorViewiPad.xib in Resources */,
+				3CAFA39D1941EAE400C14A7D /* share~ipad.png in Resources */,
+				3CAFA3A21941EAE400C14A7D /* stop~iphone.png in Resources */,
+				3CAFA35B1941EAD100C14A7D /* SecondVC.xib in Resources */,
+				3CAFA3591941EAD100C14A7D /* FirstVC.xib in Resources */,
+				3CAFA3901941EAE400C14A7D /* MovableEditorView.xib in Resources */,
+				3CAFA3A01941EAE400C14A7D /* stop@2x~iphone.png in Resources */,
+				3CAFA3921941EAE400C14A7D /* gif_3D.gif in Resources */,
+				3CAFA3A11941EAE400C14A7D /* stop~ipad.png in Resources */,
+				3CAFA3AD1941EAE400C14A7D /* TPopupView.xib in Resources */,
+				3CAFA3981941EAE400C14A7D /* record@2x~iphone.png in Resources */,
+				3CAFA3951941EAE400C14A7D /* play~ipad.png in Resources */,
+				3CAFA39B1941EAE400C14A7D /* share@2x~ipad.png in Resources */,
+				3CAFA3931941EAE400C14A7D /* play@2x~ipad.png in Resources */,
+				3CAFA39A1941EAE400C14A7D /* record~iphone.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CAFA3391941E9B000C14A7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CAFA32A1941E9B000C14A7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CAFA3AB1941EAE400C14A7D /* TFileManager.m in Sources */,
+				3CAFA3AA1941EAE400C14A7D /* TConstants.m in Sources */,
+				3CAFA3A31941EAE400C14A7D /* Scribble.m in Sources */,
+				3CAFA3A51941EAE400C14A7D /* ScribblePathPoint.m in Sources */,
+				3CAFA3AC1941EAE400C14A7D /* TPopupView.m in Sources */,
+				3CAFA3A41941EAE400C14A7D /* ScribbleEraseView.m in Sources */,
+				3CAFA3AE1941EAE400C14A7D /* UIController+SnapShotButton.m in Sources */,
+				3CAFA3A91941EAE400C14A7D /* TAudioManager.m in Sources */,
+				3CAFA3571941EAD100C14A7D /* AppDelegate.swift in Sources */,
+				3CAFA3A61941EAE400C14A7D /* ScribCapControl.m in Sources */,
+				3CAFA3AF1941EAE400C14A7D /* UIImage+GiffAnimation.m in Sources */,
+				3CAFA35A1941EAD100C14A7D /* SecondVC.swift in Sources */,
+				3CAFA3A71941EAE400C14A7D /* SnapShotView.m in Sources */,
+				3CAFA3A81941EAE400C14A7D /* TattleControl.m in Sources */,
+				3CAFA38F1941EAE400C14A7D /* MovableEditorView.m in Sources */,
+				3CAFA3581941EAD100C14A7D /* FirstVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CAFA3371941E9B000C14A7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CAFA33D1941E9B000C14A7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CAFA32D1941E9B000C14A7D /* Tattle-UI-Swift */;
+			targetProxy = 3CAFA33C1941E9B000C14A7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3CAFA3431941E9B000C14A7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CAFA3441941E9B000C14A7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CAFA3461941E9B000C14A7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SupportingFiles/Tattle-UI-Swift-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CAFA3471941E9B000C14A7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SupportingFiles/Tattle-UI-Swift-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3CAFA3491941E9B000C14A7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tattle-UI-Swift.app/Tattle-UI-Swift";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tattle-UI-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		3CAFA34A1941E9B000C14A7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tattle-UI-Swift.app/Tattle-UI-Swift";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tattle-UI-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CAFA3291941E9B000C14A7D /* Build configuration list for PBXProject "Tattle-UI-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CAFA3431941E9B000C14A7D /* Debug */,
+				3CAFA3441941E9B000C14A7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CAFA3451941E9B000C14A7D /* Build configuration list for PBXNativeTarget "Tattle-UI-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CAFA3461941E9B000C14A7D /* Debug */,
+				3CAFA3471941E9B000C14A7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CAFA3481941E9B000C14A7D /* Build configuration list for PBXNativeTarget "Tattle-UI-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CAFA3491941E9B000C14A7D /* Debug */,
+				3CAFA34A1941E9B000C14A7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CAFA3261941E9B000C14A7D /* Project object */;
+}

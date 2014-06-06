@@ -23,16 +23,13 @@
  */
 
 #import "TFileManager.h"
+#import "TConstants.h"
 
-static  NSString *SPOT_IT_DIR           = @"/SpotIt";
-
-static  NSString *SCREEN_SHOT_DIR       = @"/ScreenShots";
-static  NSString *AUDIO_DIR             = @"/Audios";
-
-static  NSString *IMAGE_EXTENSION       = @".png";
-static  NSString *TAUDIO_EXTENSION       = @".aac";
-
-static NSInteger kMaxNumberOfAudios     = 3;
+const NSString *SPOT_IT_DIR = @"/SpotIt";
+const NSString *SCREEN_SHOT_DIR = @"/ScreenShots";
+const NSString *AUDIO_DIR = @"/Audios";
+const NSString *IMAGE_EXTENSION = @".png";
+const NSInteger kMaxNumberOfAudios  = 3;
 
 @interface TFileManager()
 @property(nonatomic, strong) NSString *recentFilePathForPlaying;
@@ -58,7 +55,7 @@ static NSInteger kMaxNumberOfAudios     = 3;
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
-    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:SPOT_IT_DIR];
+    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:(NSString*)SPOT_IT_DIR];
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:dataPath])
     {
@@ -77,7 +74,7 @@ static NSInteger kMaxNumberOfAudios     = 3;
 #pragma mark create a directory for audio
 -(NSString*)getAudioDirectoryPathWithAudioName:(NSString*)append
 {
-    NSString *audioDir = [self documentsDirectoryAppendedWithPathComponent:AUDIO_DIR];
+    NSString *audioDir = [self documentsDirectoryAppendedWithPathComponent:(NSString*)AUDIO_DIR];
 
     if(!audioDir)
     {
@@ -100,7 +97,7 @@ static NSInteger kMaxNumberOfAudios     = 3;
 #pragma mark create screen name in screen shot directory
 -(NSString*)getScreenShotDirectoryPathWithScreenName:(NSString*)append
 {
-    NSString *screenDir = [self documentsDirectoryAppendedWithPathComponent:SCREEN_SHOT_DIR];
+    NSString *screenDir = [self documentsDirectoryAppendedWithPathComponent:(NSString*)SCREEN_SHOT_DIR];
     
     if(!screenDir)
     {
@@ -195,7 +192,7 @@ static NSInteger kMaxNumberOfAudios     = 3;
 #pragma mark get file path for screen shots
 -(NSArray*)getScreenShots
 {
-    NSString *screenShotDir = [self documentsDirectoryAppendedWithPathComponent:SCREEN_SHOT_DIR];
+    NSString *screenShotDir = [self documentsDirectoryAppendedWithPathComponent:(NSString*)SCREEN_SHOT_DIR];
     NSArray *screenShots    = [self getFilePathArrayFromDirectory:screenShotDir];
     return screenShots;
 }
@@ -203,13 +200,14 @@ static NSInteger kMaxNumberOfAudios     = 3;
 #pragma mark get file path for recorded audio
 -(NSArray*)getRecordedAudios
 {
-    NSString *audioDir  = [self documentsDirectoryAppendedWithPathComponent:AUDIO_DIR];
+    NSString *audioDir  = [self documentsDirectoryAppendedWithPathComponent:(NSString*)AUDIO_DIR];
     NSArray *audios     = [self getFilePathArrayFromDirectory:audioDir];
     return audios;
 }
 
 #pragma mark save screen shot image
--(BOOL)saveImage:(UIImage*)image
+
+-(BOOL)saveImage:(UIImage *)image
 {
     NSData *imageData = UIImagePNGRepresentation(image);
     if(!imageData)
@@ -221,7 +219,7 @@ static NSInteger kMaxNumberOfAudios     = 3;
 #pragma mark clear all recorded
 -(void)clearAllAudios
 {
-    NSString *audioDir  = [self documentsDirectoryAppendedWithPathComponent:AUDIO_DIR];
+    NSString *audioDir  = [self documentsDirectoryAppendedWithPathComponent:(NSString*)AUDIO_DIR];
     NSArray *audios     = [self getFilePathArrayFromDirectory:audioDir];
     
     for (NSString *filePath in audios)
@@ -231,7 +229,7 @@ static NSInteger kMaxNumberOfAudios     = 3;
 #pragma mark clear all screen shots
 -(void)clearAllScreenShots
 {
-    NSString *screenShotDir  = [self documentsDirectoryAppendedWithPathComponent:SCREEN_SHOT_DIR];
+    NSString *screenShotDir  = [self documentsDirectoryAppendedWithPathComponent:(NSString*)SCREEN_SHOT_DIR];
     NSArray *screenShots     = [self getFilePathArrayFromDirectory:screenShotDir];
     
     for (NSString *filePath in screenShots)
@@ -277,7 +275,7 @@ static NSInteger kMaxNumberOfAudios     = 3;
 #pragma Roll back recordedx audios
 -(void)rollbackTheRecordedAudios
 {
-    NSString *audioDir  = [self documentsDirectoryAppendedWithPathComponent:AUDIO_DIR];
+    NSString *audioDir  = [self documentsDirectoryAppendedWithPathComponent:(NSString*)AUDIO_DIR];
     NSArray *audios     = [self getFilePathArrayFromDirectory:audioDir];
 
     NSMutableArray *sortedArray = [self sortFilePathByDate:audios];

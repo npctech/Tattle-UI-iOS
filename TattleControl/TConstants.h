@@ -23,6 +23,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 //Audio format configuration constants.
 extern NSInteger const TFORMAT_ID;
