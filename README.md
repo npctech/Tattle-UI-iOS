@@ -28,6 +28,7 @@ Tattle-UI provides tester to send them in Email. We use [anypic app](https://git
 ## From github 
 * Download the code from github and include the files into your project. 
 * Include following frameworks
+<p class="aside-title">Objective-C</p>
 ```ruby
  OpenGLES.framework
  QuartzCore.framework
@@ -36,12 +37,37 @@ Tattle-UI provides tester to send them in Email. We use [anypic app](https://git
  MessageUI.framework
  ImageIO.framework  
 ```
-* Import "UIController+SnapShotButton.h" file into App-Prefix.pch file. `#import "UIController+SnapShotButton.h"`
-* Enable Tattle-UI control by adding below line in "AppDelegate.m".`#import "TattleControl.h"`
+<p class="aside-title">Swift</p>
+Include following header files into `AppModule-Bridging-Header.h`
+```ruby
+#import "MovableEditorView.h"
+#import "Scribble.h"
+#import "ScribbleEraseView.h"
+#import "ScribblePathPoint.h"
+#import "CommonMacro.h"
+#import "ScribCapControl.h"
+#import "SnapShotView.h"
+#import "TattleControl.h"
+#import "TAudioManager.h"
+#import "TConstants.h"
+#import "TFileManager.h"
+#import "TPopupView.h"
+#import "UIController+SnapShotButton.h"
+#import "UIImage+GiffAnimation.h"
+```
+* Import "UIController+SnapShotButton.h" file into App-Prefix.pch file. 
+<p class="aside-title">Objective-C</p>`#import "UIController+SnapShotButton.h"`
+* Enable Tattle-UI control by adding below line in "AppDelegate.m". 
+<p class="aside-title">Objective-C</p>`#import "TattleControl.h"`
 * Invoke 'enableTattleToWindow:' method, after main window creation.
+<p class="aside-title">Objective-C</p>
 ```ruby
 self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
 [[TattleControl sharedControl] enableTattleToWindow:self.window]; 
+```<p class="aside-title">Swift</p>
+```ruby
+self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+TattleControl.sharedControl().enableTattleToWindow(self.window)
 ```
 ## From Cocoapods
 
@@ -53,11 +79,21 @@ pod 'Tattle-UI-iOS', '~> 1.0.1'
 * Enable Tattle-UI control by adding below line in "AppDelegate.m".
 `#import "TattleControl.h"`
 * Invoke 'enableTattleToWindow:' method, after main window creation.
+<p class="aside-title">Objective-C</p>
 ```ruby
 self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
 [[TattleControl sharedControl] enableTattleToWindow:self.window]; 
 ```
-**Note:** [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries, [Getting started here](http://guides.cocoapods.org/using/getting-started.html)
+<p class="aside-title">Swift</p>
+
+```ruby
+self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+TattleControl.sharedControl().enableTattleToWindow(self.window)
+```
+**Note:**
+* [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries, [Getting started here](http://guides.cocoapods.org/using/getting-started.html)
+
+* Read [Importing Objective-C into Swift](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html#//apple_ref/doc/uid/TP40014216-CH10-XID_75) topic in apple's document.
 
 ## Requirment 
 
