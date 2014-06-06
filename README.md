@@ -25,7 +25,7 @@ Tattle-UI provides tester to send them in Email. We use [anypic app](https://git
 
 # Integration steps
 
-## Objective-C
+## [Objective-C](https://github.com/npctech/Tattle-UI-iOS/tree/master/Example)
 
 ### From github 
 * Download the code from github and include the files into your project. 
@@ -59,7 +59,7 @@ self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 [[TattleControl sharedControl] enableTattleToWindow:self.window];
 ```
 
-## Swift
+## [Swift](https://github.com/npctech/Tattle-UI-iOS/tree/master/Example-Swift)
 
 ### From github
 * Download the code from github and include the files into your project.
@@ -179,18 +179,18 @@ TattleControl.sharedControl().changeSpotImageColor(YOUR_Color)
 ```
 
 We could also insert our own image too instead spot icon.
-```
+```ruby
 TattleControl.sharedControl().setSpotButtonImage(YOUR_Image)
 ```
 
 * **Change background color of floating control**
-```
+```ruby
 TattleControl.sharedControl().setMovableControlBackgroundColor(YOUR_Color)
 TattleControl.sharedControl().setMovableControlBackgroundColor(YOUR_Color, withAlpha: alpha)
 ```
 
 * **Set recipients email** 
-```
+```ruby
 TattleControl.sharedControl().assignRecipientEmailId("YOUR_EMAIL_HERE", withCCId: "YOUR_EMAIL_HERE", emailSubject: "Bugs")
 ```
 
