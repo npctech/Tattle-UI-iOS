@@ -18,10 +18,10 @@ Tattle-UI library takes the snapshot of the current screen and allow the tester
 to mark problematic section using scribbles. Tester may wish to add a audio note along with this. 
 Tattle-UI provides tester to send them in Email. We use [anypic app](https://github.com/ParsePlatform/Anypic) to demo this control.
 
-[![](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/Thumbnail/ShotImage.png)](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/ShotImage.png)
-[![](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/Thumbnail/Scribble.png)](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/Scribble.png)
-[![](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/Thumbnail/AudioRecordPlay.png)](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/AudioRecordPlay.png)
-[![](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/Thumbnail/ShareViaMail.png)](https://raw.githubusercontent.com/npctech/-UI-iOS/master/Screenshot/ShareViaMail.png)
+[![](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/Thumbnail/ShotImage.png)](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/ShotImage.png)
+[![](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/Thumbnail/Scribble.png)](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/Scribble.png)
+[![](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/Thumbnail/AudioRecordPlay.png)](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/AudioRecordPlay.png)
+[![](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/Thumbnail/ShareViaMail.png)](https://raw.githubusercontent.com/npctech/Tattle-UI-iOS/master/Screenshot/ShareViaMail.png)
 
 # Integration steps
 
