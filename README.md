@@ -25,11 +25,11 @@ Tattle-UI provides tester to send them in Email. We use [anypic app](https://git
 
 # Integration steps
 
-## From github 
-* Download the code from github and include the files into your project. 
+## Objective-C
 
-###### `Objective-C`
-Include following frameworks
+### From github 
+* Download the code from github and include the files into your project. 
+* Include following frameworks
 ```ruby
  OpenGLES.framework
  QuartzCore.framework
@@ -38,54 +38,32 @@ Include following frameworks
  MessageUI.framework
  ImageIO.framework  
 ```
-###### `Swift`
-Include following header files into `AppModule-Bridging-Header.h`
-```ruby
-#import "MovableEditorView.h"
-#import "Scribble.h"
-#import "ScribbleEraseView.h"
-#import "ScribblePathPoint.h"
-#import "CommonMacro.h"
-#import "ScribCapControl.h"
-#import "SnapShotView.h"
-#import "TattleControl.h"
-#import "TAudioManager.h"
-#import "TConstants.h"
-#import "TFileManager.h"
-#import "TPopupView.h"
-#import "UIController+SnapShotButton.h"
-#import "UIImage+GiffAnimation.h"
-```
-* Import "UIController+SnapShotButton.h" file into App-Prefix.pch file. 
-
-###### `Objective-C`
-`#import "UIController+SnapShotButton.h"`
-* Enable Tattle-UI control by adding below line in "AppDelegate.m". 
-
-###### `Objective-C`
-`#import "TattleControl.h"`
+* Import "UIController+SnapShotButton.h" file into App-Prefix.pch file. `#import "UIController+SnapShotButton.h"`
+* Enable Tattle-UI control by adding below line in "AppDelegate.m". `#import "TattleControl.h"`
 * Invoke `enableTattleToWindow:` method, after main window creation.
-
-###### `Objective-C`
 ```ruby
 self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
 [[TattleControl sharedControl] enableTattleToWindow:self.window]; 
 ```
-###### `Swift`
-```ruby
-self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-TattleControl.sharedControl().enableTattleToWindow(self.window)
-```
-## From Cocoapods
 
+### From Cocoapods
 * Podfile 
 ```ruby
 platform :ios, '6.0'
 pod 'Tattle-UI-iOS', '~> 1.0.1'
 ```
+* Enable Tattle-UI control by adding below line in "AppDelegate.m". `#import "TattleControl.h"`
+* Invoke `enableTattleToWindow:` method, after main window creation.
+```ruby
+self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
+[[TattleControl sharedControl] enableTattleToWindow:self.window];
+```
 
-###### `Swift`
-Include following header files into `AppModule-Bridging-Header.h`
+## Swift
+
+### From github
+* Download the code from github and include the files into your project.
+* Include following header files into `AppModule-Bridging-Header.h`
 ```ruby
 #import "MovableEditorView.h"
 #import "Scribble.h"
@@ -102,20 +80,41 @@ Include following header files into `AppModule-Bridging-Header.h`
 #import "UIController+SnapShotButton.h"
 #import "UIImage+GiffAnimation.h"
 ```
-* Enable Tattle-UI control by adding below line in "AppDelegate.m".
-`#import "TattleControl.h"`
 * Invoke `enableTattleToWindow:` method, after main window creation.
-
-###### `Objective-C`
-```ruby
-self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
-[[TattleControl sharedControl] enableTattleToWindow:self.window]; 
-```
-###### `Swift`
 ```ruby
 self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 TattleControl.sharedControl().enableTattleToWindow(self.window)
 ```
+
+### From Cocoapods
+* Podfile 
+```ruby
+platform :ios, '6.0'
+pod 'Tattle-UI-iOS', '~> 1.0.1'
+```
+* Include following header files into `AppModule-Bridging-Header.h`
+```ruby
+#import "MovableEditorView.h"
+#import "Scribble.h"
+#import "ScribbleEraseView.h"
+#import "ScribblePathPoint.h"
+#import "CommonMacro.h"
+#import "ScribCapControl.h"
+#import "SnapShotView.h"
+#import "TattleControl.h"
+#import "TAudioManager.h"
+#import "TConstants.h"
+#import "TFileManager.h"
+#import "TPopupView.h"
+#import "UIController+SnapShotButton.h"
+#import "UIImage+GiffAnimation.h"
+```
+* Invoke `enableTattleToWindow:` method, after main window creation.
+```ruby
+self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
+[[TattleControl sharedControl] enableTattleToWindow:self.window]; 
+```
+
 **Note:**
 * [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries, [Getting started here](http://guides.cocoapods.org/using/getting-started.html)
 
@@ -135,81 +134,72 @@ TattleControl.sharedControl().enableTattleToWindow(self.window)
 
 # Optional Configuration
 
-* **Change scribble color (default black)**
+## Objective-C
 
-###### Objective-C
+* **Change scribble color (default black)**
 ```ruby
 [[TattleControl sharedControl] setScribbleColor:YOUR_Color];
 ```
-###### Swift
+* **Change color of floating button**
+```ruby
+[[TattleControl sharedControl] changeSpotImageColor:YOUR_Color];
+```
+
+We could also insert our own image too instead spot icon.
+```ruby
+[[TattleControl sharedControl] setSpotButtonImage:YOUR_Image];
+```
+* **Change background color of floating control**
+```ruby
+[[TattleControl sharedControl] setMovableControlBackgroundColor:YOUR_Color];
+[[TattleControl sharedControl] setMovableControlBackgroundColor:YOUR_Color withAlpha:alpha];
+```
+* **Set recipients email** 
+```ruby
+[[TattleControl sharedControl] assignRecipientEmailId:@"YOUR_EMAIL_HERE" withCCId:@"YOUR_EMAIL_HERE" emailSubject:@"UI Bug using Tattle UI"];
+```
+* **Add more Recipient**
+```ruby
+[[TattleControl sharedControl] addRecipientMailId:@"YOUR_EMAIL_HERE"];
+```
+* **Add more CC**
+```ruby
+[[TattleControl sharedControl] addCCMailId:@"YOUR_EMAIL_HERE"];
+```
+
+## Swift
+* **Change scribble color (default black)**
 ```ruby
 TattleControl.sharedControl().setScribbleColor(YOUR_Color)
 ```
 
 * **Change color of floating button**
-
-###### Objective-C
-```ruby
-[[TattleControl sharedControl] changeSpotImageColor:YOUR_Color];
-```
-###### Swift
 ```ruby
 TattleControl.sharedControl().changeSpotImageColor(YOUR_Color)
 ```
 
 We could also insert our own image too instead spot icon.
-
-###### Objective-C
-```ruby
-[[TattleControl sharedControl] setSpotButtonImage:YOUR_Image];
-```
-###### Swift
 ```
 TattleControl.sharedControl().setSpotButtonImage(YOUR_Image)
 ```
 
 * **Change background color of floating control**
-
-###### Objective-C
-```ruby
-[[TattleControl sharedControl] setMovableControlBackgroundColor:YOUR_Color];
-[[TattleControl sharedControl] setMovableControlBackgroundColor:YOUR_Color withAlpha:alpha];
-```
-###### Swift
 ```
 TattleControl.sharedControl().setMovableControlBackgroundColor(YOUR_Color)
 TattleControl.sharedControl().setMovableControlBackgroundColor(YOUR_Color, withAlpha: alpha)
 ```
 
 * **Set recipients email** 
-
-###### Objective-C
-```ruby
-[[TattleControl sharedControl] assignRecipientEmailId:@"YOUR_EMAIL_HERE" withCCId:@"YOUR_EMAIL_HERE" emailSubject:@"UI Bug using Tattle UI"];
-```
-###### Swift
 ```
 TattleControl.sharedControl().assignRecipientEmailId("YOUR_EMAIL_HERE", withCCId: "YOUR_EMAIL_HERE", emailSubject: "Bugs")
 ```
 
 * **Add more Recipient**
-
-###### Objective-C
-```ruby
-[[TattleControl sharedControl] addRecipientMailId:@"YOUR_EMAIL_HERE"];
-```
-###### Swift
 ```ruby
 TattleControl.sharedControl().addRecipientMailId("YOUR_EMAIL_HERE")
 ```
 
 * **Add more CC**
-
-###### Objective-C
-```ruby
-[[TattleControl sharedControl] addCCMailId:@"YOUR_EMAIL_HERE"];
-```
-###### Swift
 ```ruby
 TattleControl.sharedControl().addCCMailId("YOUR_EMAIL_HERE")
 ```
