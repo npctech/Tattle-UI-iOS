@@ -27,8 +27,9 @@ Tattle-UI provides tester to send them in Email. We use [anypic app](https://git
 
 ## From github 
 * Download the code from github and include the files into your project. 
-* Include following frameworks
-<p class="aside-title">Objective-C</p>
+
+###### `Objective-C`
+Include following frameworks
 ```ruby
  OpenGLES.framework
  QuartzCore.framework
@@ -37,7 +38,7 @@ Tattle-UI provides tester to send them in Email. We use [anypic app](https://git
  MessageUI.framework
  ImageIO.framework  
 ```
-<p class="aside-title">Swift</p>
+###### `Swift`
 Include following header files into `AppModule-Bridging-Header.h`
 ```ruby
 #import "MovableEditorView.h"
@@ -56,15 +57,21 @@ Include following header files into `AppModule-Bridging-Header.h`
 #import "UIImage+GiffAnimation.h"
 ```
 * Import "UIController+SnapShotButton.h" file into App-Prefix.pch file. 
-<p class="aside-title">Objective-C</p>`#import "UIController+SnapShotButton.h"`
+
+###### `Objective-C`
+`#import "UIController+SnapShotButton.h"`
 * Enable Tattle-UI control by adding below line in "AppDelegate.m". 
-<p class="aside-title">Objective-C</p>`#import "TattleControl.h"`
-* Invoke 'enableTattleToWindow:' method, after main window creation.
-<p class="aside-title">Objective-C</p>
+
+###### `Objective-C`
+`#import "TattleControl.h"`
+* Invoke `enableTattleToWindow:` method, after main window creation.
+
+###### `Objective-C`
 ```ruby
 self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
 [[TattleControl sharedControl] enableTattleToWindow:self.window]; 
-```<p class="aside-title">Swift</p>
+```
+###### `Swift`
 ```ruby
 self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 TattleControl.sharedControl().enableTattleToWindow(self.window)
@@ -79,13 +86,13 @@ pod 'Tattle-UI-iOS', '~> 1.0.1'
 * Enable Tattle-UI control by adding below line in "AppDelegate.m".
 `#import "TattleControl.h"`
 * Invoke 'enableTattleToWindow:' method, after main window creation.
-<p class="aside-title">Objective-C</p>
+
+###### `Objective-C`
 ```ruby
 self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
 [[TattleControl sharedControl] enableTattleToWindow:self.window]; 
 ```
-<p class="aside-title">Swift</p>
-
+###### `Swift`
 ```ruby
 self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 TattleControl.sharedControl().enableTattleToWindow(self.window)
