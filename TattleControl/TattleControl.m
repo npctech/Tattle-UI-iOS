@@ -445,7 +445,7 @@ NSInteger const kMailSuccess    = 1008;
     for (NSString *path  in audios)
     {
         i++;
-        [mailComposer addAttachmentData:[NSData dataWithContentsOfFile:path] mimeType:(NSString*)kMimeTypeAudio fileName:[NSString stringWithFormat:@"%@%d", kAudioPrefix, i]];
+        [mailComposer addAttachmentData:[NSData dataWithContentsOfFile:path] mimeType:(NSString*)kMimeTypeAudio fileName:[NSString stringWithFormat:@"%@%ld", kAudioPrefix, (long)i]];
     }
     //Set subject
     if(self.emailSubject)
@@ -461,7 +461,7 @@ NSInteger const kMailSuccess    = 1008;
     for (NSString *path  in screenShots)
     {
         i++;
-        [mailComposer addAttachmentData:[NSData dataWithContentsOfFile:path] mimeType:(NSString*)kMimeTypeImage fileName:[NSString stringWithFormat:@"%@%d", kImagePrefix, i]];
+        [mailComposer addAttachmentData:[NSData dataWithContentsOfFile:path] mimeType:(NSString*)kMimeTypeImage fileName:[NSString stringWithFormat:@"%@%ld", kImagePrefix, (long)i]];
     }
     self.presentedVC = [self getVisibleViewControllerFrom:self.window.rootViewController];
     if(self.presentedVC)

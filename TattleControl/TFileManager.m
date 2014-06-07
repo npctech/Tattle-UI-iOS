@@ -268,7 +268,7 @@ const NSInteger kMaxNumberOfAudios  = 3;
     for (NSString *filePath in arr)
     {
         NSDate* d1 = [[[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil] objectForKey:@"NSFileCreationDate"];
-        NSLog(@"%d - Created Date %@", i++, d1);
+        NSLog(@"%ld - Created Date %@", (long)i++, d1);
     }
 }
 

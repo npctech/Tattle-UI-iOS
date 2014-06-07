@@ -83,13 +83,13 @@
     {
         _recordingParamsDicionary = [[NSMutableDictionary alloc]init];
         
-        [_recordingParamsDicionary setObject:[NSNumber numberWithInt:TFORMAT_ID] forKey: AVFormatIDKey];
-        [_recordingParamsDicionary setObject:[NSNumber numberWithInt:TSAMPLE_RATE] forKey: AVSampleRateKey];
-        [_recordingParamsDicionary setObject:[NSNumber numberWithInt:TNUMBER_OF_CHANNEL] forKey:AVNumberOfChannelsKey];
+        [_recordingParamsDicionary setObject:[NSNumber numberWithInteger:TFORMAT_ID] forKey: AVFormatIDKey];
+        [_recordingParamsDicionary setObject:[NSNumber numberWithInteger:TSAMPLE_RATE] forKey: AVSampleRateKey];
+        [_recordingParamsDicionary setObject:[NSNumber numberWithInteger:TNUMBER_OF_CHANNEL] forKey:AVNumberOfChannelsKey];
         
-        [_recordingParamsDicionary setObject:[NSNumber numberWithInt:TBIT_RATE_KEY] forKey:AVEncoderBitRateKey];
-        [_recordingParamsDicionary setObject:[NSNumber numberWithInt:TBIT_DEPTH_KEY] forKey:AVLinearPCMBitDepthKey];
-        [_recordingParamsDicionary setObject:[NSNumber numberWithInt:TAUDIO_QUALITY] forKey: AVEncoderAudioQualityKey];
+        [_recordingParamsDicionary setObject:[NSNumber numberWithInteger:TBIT_RATE_KEY] forKey:AVEncoderBitRateKey];
+        [_recordingParamsDicionary setObject:[NSNumber numberWithInteger:TBIT_DEPTH_KEY] forKey:AVLinearPCMBitDepthKey];
+        [_recordingParamsDicionary setObject:[NSNumber numberWithInteger:TAUDIO_QUALITY] forKey: AVEncoderAudioQualityKey];
         
     }
     return _recordingParamsDicionary;

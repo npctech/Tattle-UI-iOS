@@ -97,7 +97,7 @@ typedef enum NSInteger MovableControlButtonId;
     self.trackingColor = [UIColor colorWithRed:215.0/255.0 green:215.0/255.0 blue:150.0/255.0 alpha:1];
 }
 
-- (void)setValue:(float)newValue
+- (void)setValue:(CGFloat)newValue
 {
 	if (newValue > self.maximumValue)
 		_value = self.maximumValue;
