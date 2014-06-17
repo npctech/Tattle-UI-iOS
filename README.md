@@ -111,8 +111,8 @@ pod 'Tattle-UI-iOS', '~> 1.0.1'
 ```
 * Invoke `enableTattleToWindow:` method, after main window creation.
 ```ruby
-self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
-[[TattleControl sharedControl] enableTattleToWindow:self.window]; 
+self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+TattleControl.sharedControl().enableTattleToWindow(self.window)
 ```
 
 **Note:**
@@ -120,7 +120,7 @@ self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
 * Read [Importing Objective-C into Swift](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html#//apple_ref/doc/uid/TP40014216-CH10-XID_75) topic for swift migration.
 
-## Requirment 
+## Requirement
 
 * Minimum ios target : iOS 6
 * Minimum xcode : Xcode 5.0
