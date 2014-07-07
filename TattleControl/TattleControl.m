@@ -29,6 +29,8 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import "TPopupView.h"
+#include <sys/types.h>
+#include <sys/sysctl.h>
 
 #define SquareButtonSize 40
 #define DefaultSpotImageColor [UIColor colorWithRed:30.0/255.0 green:153.0/255.0 blue:246.0/255.0 alpha:0.75];
@@ -431,6 +433,103 @@ NSInteger const kMailSuccess    = 1008;
     return ([vc presentedViewController]) ? [vc presentedViewController]: nil;
 }
 
+-(NSString*)getAppName
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+}
+
+- (NSString *)getAppVersion
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
+}
+
+-(NSString *)getBuild
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey: (NSString *)kCFBundleVersionKey];
+}
+
+-(NSString*)getBundleIdentifier
+{
+    return [[NSBundle mainBundle] bundleIdentifier];
+}
+
+- (NSString *) platform{
+    size_t size;
+    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+    char *machine = malloc(size);
+    sysctlbyname("hw.machine", machine, &size, NULL, 0);
+    NSString *platform = [NSString stringWithUTF8String:machine];
+    free(machine);
+    return platform;
+}
+
+- (NSString *) platformString{
+    NSString *platform = [self platform];
+    if ([platform isEqualToString:@"iPhone1,1"])    return @"iPhone 1G";
+    if ([platform isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
+    if ([platform isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
+    if ([platform isEqualToString:@"iPhone3,1"])    return @"iPhone 4";
+    if ([platform isEqualToString:@"iPhone3,3"])    return @"Verizon iPhone 4";
+    if ([platform isEqualToString:@"iPhone4,1"])    return @"iPhone 4S";
+    if ([platform isEqualToString:@"iPhone5,1"])    return @"iPhone 5 (GSM)";
+    if ([platform isEqualToString:@"iPhone5,2"])    return @"iPhone 5 (GSM+CDMA)";
+    if ([platform isEqualToString:@"iPhone5,3"])    return @"iPhone 5c (GSM)";
+    if ([platform isEqualToString:@"iPhone5,4"])    return @"iPhone 5c (GSM+CDMA)";
+    if ([platform isEqualToString:@"iPhone6,1"])    return @"iPhone 5s (GSM)";
+    if ([platform isEqualToString:@"iPhone6,2"])    return @"iPhone 5s (GSM+CDMA)";
+    if ([platform isEqualToString:@"iPod1,1"])      return @"iPod Touch 1G";
+    if ([platform isEqualToString:@"iPod2,1"])      return @"iPod Touch 2G";
+    if ([platform isEqualToString:@"iPod3,1"])      return @"iPod Touch 3G";
+    if ([platform isEqualToString:@"iPod4,1"])      return @"iPod Touch 4G";
+    if ([platform isEqualToString:@"iPod5,1"])      return @"iPod Touch 5G";
+    if ([platform isEqualToString:@"iPad1,1"])      return @"iPad";
+    if ([platform isEqualToString:@"iPad2,1"])      return @"iPad 2 (WiFi)";
+    if ([platform isEqualToString:@"iPad2,2"])      return @"iPad 2 (GSM)";
+    if ([platform isEqualToString:@"iPad2,3"])      return @"iPad 2 (CDMA)";
+    if ([platform isEqualToString:@"iPad2,4"])      return @"iPad 2 (WiFi)";
+    if ([platform isEqualToString:@"iPad2,5"])      return @"iPad Mini (WiFi)";
+    if ([platform isEqualToString:@"iPad2,6"])      return @"iPad Mini (GSM)";
+    if ([platform isEqualToString:@"iPad2,7"])      return @"iPad Mini (GSM+CDMA)";
+    if ([platform isEqualToString:@"iPad3,1"])      return @"iPad 3 (WiFi)";
+    if ([platform isEqualToString:@"iPad3,2"])      return @"iPad 3 (GSM+CDMA)";
+    if ([platform isEqualToString:@"iPad3,3"])      return @"iPad 3 (GSM)";
+    if ([platform isEqualToString:@"iPad3,4"])      return @"iPad 4 (WiFi)";
+    if ([platform isEqualToString:@"iPad3,5"])      return @"iPad 4 (GSM)";
+    if ([platform isEqualToString:@"iPad3,6"])      return @"iPad 4 (GSM+CDMA)";
+    if ([platform isEqualToString:@"iPad4,1"])      return @"iPad Air (WiFi)";
+    if ([platform isEqualToString:@"iPad4,2"])      return @"iPad Air (Cellular)";
+    if ([platform isEqualToString:@"iPad4,4"])      return @"iPad mini 2G (WiFi)";
+    if ([platform isEqualToString:@"iPad4,5"])      return @"iPad mini 2G (Cellular)";
+    if ([platform isEqualToString:@"i386"])         return @"Simulator";
+    if ([platform isEqualToString:@"x86_64"])       return @"Simulator";
+    return platform;
+}
+
+-(NSString *)batteryStatusString
+{
+    UIDevice *device = [UIDevice currentDevice];
+    [device setBatteryMonitoringEnabled:YES];
+    NSString *batteryStateString = nil;
+    switch(device.batteryState)
+    {
+        case UIDeviceBatteryStateUnplugged: batteryStateString = @"Unplugged"; break;
+        case UIDeviceBatteryStateCharging: batteryStateString = @"Charging"; break;
+        case UIDeviceBatteryStateFull: batteryStateString = @"Full"; break;
+        default: batteryStateString = @"Unknown"; break;
+    }
+    [device setBatteryMonitoringEnabled:NO];
+    return batteryStateString;
+}
+
+-(int)getBatteryLevel
+{
+    UIDevice *device = [UIDevice currentDevice];
+    [device setBatteryMonitoringEnabled:YES];
+    int batteryLevel = (int)([device batteryLevel]*100.0);
+    [device setBatteryMonitoringEnabled:NO];
+    return batteryLevel;
+}
+
 #pragma mark send screen shot
 -(void)sendScreenShotAudioFiles
 {
@@ -439,6 +538,10 @@ NSInteger const kMailSuccess    = 1008;
     [self removeSnapShotView];
     MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc]init];
     [mailComposer setMailComposeDelegate:self];
+    NSMutableString *systemInfo = [NSMutableString string];
+    UIDevice *device = [UIDevice currentDevice];
+    [systemInfo appendFormat:@"<html><body><table><tr><td colspan=2 bgcolor=#4F81BD><FONT color=white  SIZE=2> System info for %@ </FONT></td></tr><tr bgcolor=#D0D8E8><td>Build Version</td><td>%@(%@)</td></tr><tr bgcolor=#D0D8E8><td width=30 >Device Name</td><td width=170>%@</td></tr><tr bgcolor=#D0D8E8><td>Model</td><td>%@</td></tr><tr bgcolor=#D0D8E8><td>OS(version)</td><td>%@(%@)</td><tr bgcolor=#D0D8E8><td>Battery Level</td><td>%d%%(%@)</td></tr><tr bgcolor=#D0D8E8><td>Brightness</td><td>%d%%</td></tr></table></body></html>",[self getAppName],[self getBuild],[self getAppVersion],[device name],[self platformString],[device systemName],[device systemVersion],[self getBatteryLevel],[self batteryStatusString],(int)([[UIScreen mainScreen] brightness] *100.0)];
+    [mailComposer setMessageBody:systemInfo isHTML:YES];
     //Attach audios
     NSInteger i = 0;
     NSArray *audios = [[TFileManager sharedFileManager] getRecordedAudios];
