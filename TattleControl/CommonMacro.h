@@ -32,4 +32,10 @@
 #define IS_IPAD ([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)] && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 #define resizeDependsDevice(originalSize) (CGFloat)(IS_IPAD ? originalSize*2 : originalSize)
 
+#ifndef __OPTIMIZE__
+#define NSLog(fmt,...)  NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif
+
 #endif
