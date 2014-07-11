@@ -107,7 +107,7 @@
         
         if (recordingError)
         {
-            NSLog(@"Recodring error: %@", recordingError.description);
+            TLog(@"Recodring error: %@", recordingError.description);
         }
     }
     return _recorder;
@@ -170,7 +170,7 @@
         }
         else
         {
-            NSLog(@"Error: Recorder not ready:");
+            TLog(@"Error: Recorder not ready:");
             return TRecordingStatusFailedToStart;
         }
     }
@@ -306,19 +306,19 @@
     
     if(![audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&err])
     {
-        NSLog(@"Error: failed to set category for audio session+++ description %@", err.description);
+        TLog(@"Error: failed to set category for audio session+++ description %@", err.description);
         return NO;
     }
     
     if(![audioSession setCategory:AVAudioSessionCategoryMultiRoute error:&err])
     {
-        NSLog(@"Error: failed to set category for audio session+++ description %@", err.description);
+        TLog(@"Error: failed to set category for audio session+++ description %@", err.description);
         return NO;
     }
     
     BOOL active = [audioSession setActive: YES error: &err];
     if (!active)
-        NSLog(@"Failed to set category on AVAudioSession+++ Description %@", err.description);
+        TLog(@"Failed to set category on AVAudioSession+++ Description %@", err.description);
     
     return YES;
 }
@@ -334,7 +334,7 @@
 
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error{
     
-    NSLog(@"Error: AudioPlayer DecodeError Occured %@", error.description);
+    TLog(@"Error: AudioPlayer DecodeError Occured %@", error.description);
     if(self.audioPlayerErrorBlock)
         self.audioPlayerErrorBlock(error);
 }
@@ -364,7 +364,7 @@
 
         //Check the player is ready for play
         if(![self.player prepareToPlay]){
-            NSLog(@"Failed to start player %@", error.description);
+            TLog(@"Failed to start player %@", error.description);
             return TPlayingStatusFailedToStart;
         }
         
@@ -415,7 +415,7 @@
     }
     else
     {
-        NSLog(@"Error: Can't set current time. Audio  player not started yet");
+        TLog(@"Error: Can't set current time. Audio  player not started yet");
     }
 }
 

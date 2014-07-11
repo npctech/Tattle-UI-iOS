@@ -55,7 +55,7 @@
 
 -(IBAction)thirdButtonFired:(id)sender
 {
-    NSLog(@"Third Button Fired");
+    TLog(@"Third Button Fired");
 }
 
 @end

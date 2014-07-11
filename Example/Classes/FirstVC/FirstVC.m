@@ -61,7 +61,7 @@
 
 -(IBAction)secondButtonFired:(id)sender
 {
-    NSLog(@"Second Button Fired");
+    TLog(@"Second Button Fired");
     SecondVC *secondVC = [[SecondVC alloc] init];
     [self.navigationController pushViewController:secondVC animated:YES];
 }

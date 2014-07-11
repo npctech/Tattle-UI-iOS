@@ -238,7 +238,7 @@ typedef enum NSInteger MovableControlButtonId;
 
 -(CGPoint)checkViewOutOfBounds:(UIView*)snapView withBaseView:(UIView*)baseView
 {
-    NSLog(@"Snap view Frame %f %f",snapView.center.x,snapView.center.y);
+    TLog(@"Snap view Frame %f %f",snapView.center.x,snapView.center.y);
     CGPoint leftTopCorner = CGPointMake( snapView.frame.size.width/2,  snapView.frame.size.height/2);
     CGPoint rightTopCorner = CGPointMake( baseView.frame.size.width - snapView.frame.size.width/2, snapView.frame.size.height/2);
     CGPoint leftBottomCornor = CGPointMake( snapView.frame.size.width/2, baseView.frame.size.height -  snapView.frame.size.height/2);
@@ -313,7 +313,7 @@ typedef enum NSInteger MovableControlButtonId;
             }
             else
             {
-                NSLog(@"Error: Failed to get screen shot ");
+                TLog(@"Error: Failed to get screen shot ");
             }
         }
     }
@@ -432,7 +432,7 @@ typedef enum NSInteger MovableControlButtonId;
                 }
                 else
                 {
-                    NSLog(@"Error: No recorded audio file found");
+                    TLog(@"Error: No recorded audio file found");
                 }
             }
             else if([[TAudioManager sharedAudioManager] getPlayerStatus] == TPlayerStatusPlaying)

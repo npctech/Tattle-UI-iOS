@@ -248,7 +248,7 @@ CGFloat const GifAnimationDuration = 3.4;
         scale = [[UIScreen mainScreen] scale];
     }
 #endif
-    NSLog(@"Screen scale %f", scale);
+    TLog(@"Screen scale %f", scale);
     return scale;
 }
 

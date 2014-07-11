@@ -105,7 +105,7 @@ NSInteger const kMailSuccess    = 1008;
 
 -(void)snapButtonFired:(UIButton*)snapButton
 {
-    NSLog(@"Snap button Fired");
+    TLog(@"Snap button Fired");
     [snapButton setHidden:YES];
     [self setNeedsDisplay];
     [[SnapShotView sharedView] assignBackgroundColorWithImage:[self getScreenShotImageWithOutStatusBar]];
@@ -179,7 +179,7 @@ NSInteger const kMailSuccess    = 1008;
 
 -(CGPoint)checkViewOutOfBounds:(UIView*)snapView withBaseView:(UIView*)baseView
 {
-    NSLog(@"Snap view Frame %f %f",snapView.center.x,snapView.center.y);
+    TLog(@"Snap view Frame %f %f",snapView.center.x,snapView.center.y);
     CGPoint leftTopCorner = CGPointMake( snapView.frame.size.width/2,  snapView.frame.size.height/2);
     CGPoint rightTopCorner = CGPointMake( baseView.frame.size.width - snapView.frame.size.width/2, snapView.frame.size.height/2);
     CGPoint leftBottomCornor = CGPointMake( snapView.frame.size.width/2, baseView.frame.size.height -  snapView.frame.size.height/2);
@@ -355,12 +355,12 @@ NSInteger const kMailSuccess    = 1008;
             self.confirmationView = [[[NSBundle mainBundle] loadNibNamed:@"TPopupView" owner:nil options:nil] firstObject];
         __weak typeof(self) weakSelf = self;
         self.confirmationView.okActionBlock = ^{
-            NSLog(@"Ok Button Tapped");
+            TLog(@"Ok Button Tapped");
             [weakSelf.confirmationView removeFromSuperview];
             [weakSelf showWithAnimation];
         };
         self.confirmationView.cancelActionBlock = ^{
-            NSLog(@"Cancel button Tapped");
+            TLog(@"Cancel button Tapped");
             [weakSelf.confirmationView hideWithAnimation];
         };
     }

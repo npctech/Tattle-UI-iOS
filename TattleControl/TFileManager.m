@@ -62,7 +62,7 @@ const NSInteger kMaxNumberOfAudios  = 3;
         NSError *error;
         if(![[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&error])
         {
-            NSLog(@"Failed to create directory %@", dataPath);
+            TLog(@"Failed to create directory %@", dataPath);
             return nil;
         }
     }
@@ -85,7 +85,7 @@ const NSInteger kMaxNumberOfAudios  = 3;
         NSError *error;
         if(![[NSFileManager defaultManager] createDirectoryAtPath:audioDir withIntermediateDirectories:NO attributes:nil error:&error])
         {
-            NSLog(@"Failed to create directory %@", audioDir);
+            TLog(@"Failed to create directory %@", audioDir);
             return nil;
         }
     }
@@ -120,7 +120,7 @@ const NSInteger kMaxNumberOfAudios  = 3;
     NSString *fileName = [NSString stringWithFormat:@"%@%@", [NSDate date], IMAGE_EXTENSION];
     NSString *filePath = [self getScreenShotDirectoryPathWithScreenName:fileName];
    
-    NSLog(@"Image File path %@", filePath);
+    TLog(@"Image File path %@", filePath);
     return filePath;
 }
 
@@ -129,7 +129,7 @@ const NSInteger kMaxNumberOfAudios  = 3;
 {
     NSString *fileName = [NSString stringWithFormat:@"%@%@", [NSDate date], TAUDIO_EXTENSION];
     NSString *filePath = [self getAudioDirectoryPathWithAudioName:fileName];
-    NSLog(@"Audio File path %@", filePath);
+    TLog(@"Audio File path %@", filePath);
     
     [self setRecentFilePathForPlaying:filePath];
     return filePath;
@@ -154,7 +154,7 @@ const NSInteger kMaxNumberOfAudios  = 3;
     }
     else
     {
-        NSLog(@"File doesn't exist at path: %@", filePath);
+        TLog(@"File doesn't exist at path: %@", filePath);
         return NO;
     }    
 }
@@ -175,7 +175,7 @@ const NSInteger kMaxNumberOfAudios  = 3;
     
     if(!(docContents && docContents.count > 0))
     {
-        NSLog(@"Error: Directory is empty!");
+        TLog(@"Error: Directory is empty!");
         return nil;
     }
     
@@ -264,12 +264,14 @@ const NSInteger kMaxNumberOfAudios  = 3;
 #pragma Print the creation date of the file from file name
 -(void)createdDatesOfFile:(NSArray*)arr
 {
+#ifndef __OPTIMIZE__
     NSInteger i = 0;
     for (NSString *filePath in arr)
     {
         NSDate* d1 = [[[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil] objectForKey:@"NSFileCreationDate"];
-        NSLog(@"%ld - Created Date %@", (long)i++, d1);
+        TLog(@"%ld - Created Date %@", (long)i++, d1);
     }
+#endif
 }
 
 #pragma Roll back recordedx audios
@@ -288,7 +290,7 @@ const NSInteger kMaxNumberOfAudios  = 3;
             if([self clearFileFromDisk:[sortedArray lastObject]])
                 [sortedArray removeLastObject];
         } while (sortedArray.count > kMaxNumberOfAudios);
-        NSLog(@"After roll back");
+        TLog(@"After roll back");
         [self createdDatesOfFile:sortedArray];
     }
 }

@@ -54,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07AE5D31196F96A800D21C87 /* TLogControlMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLogControlMacro.h; sourceTree = "<group>"; };
 		3C98121E19336453008ED839 /* Tattle-UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tattle-UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C98122119336453008ED839 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C98122319336453008ED839 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -191,6 +192,7 @@
 			children = (
 				3C98126E193369E2008ED839 /* Resources */,
 				3C981269193369E2008ED839 /* CommonMacro.h */,
+				07AE5D31196F96A800D21C87 /* TLogControlMacro.h */,
 				3C98126A193369E2008ED839 /* MovableEditorView.h */,
 				3C98126B193369E2008ED839 /* MovableEditorView.m */,
 				3C98126C193369E2008ED839 /* MovableEditorView.xib */,
