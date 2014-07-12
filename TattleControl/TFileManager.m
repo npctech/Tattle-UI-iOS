@@ -24,6 +24,7 @@
 
 #import "TFileManager.h"
 #import "TConstants.h"
+#import "TLogControlMacro.h"
 
 const NSString *SPOT_IT_DIR = @"/SpotIt";
 const NSString *SCREEN_SHOT_DIR = @"/ScreenShots";

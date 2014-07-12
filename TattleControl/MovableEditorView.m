@@ -30,6 +30,7 @@
 #import "CommonMacro.h"
 #import <QuartzCore/QuartzCore.h>
 #import "TConstants.h"
+#import "TLogControlMacro.h"
 
 NSString *const AUDIO_SELECTED_IMAGE        = @"audio_selected.png";
 NSString *const AUDIO_UNSELECTED_IMAGE      = @"audio_unselected.png";

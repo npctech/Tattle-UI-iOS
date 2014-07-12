@@ -14,5 +14,4 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "UIController+SnapShotButton.h"
-    #import "TLogControlMacro.h"
 #endif

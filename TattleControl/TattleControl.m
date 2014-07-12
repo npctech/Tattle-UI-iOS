@@ -29,6 +29,7 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import "TPopupView.h"
+#import "TLogControlMacro.h"
 #include <sys/types.h>
 #include <sys/sysctl.h>
 

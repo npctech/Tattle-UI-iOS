@@ -24,6 +24,7 @@
 
 #import "FirstVC.h"
 #import "SecondVC.h"
+#import "TLogControlMacro.h"
 
 @interface FirstVC ()
 

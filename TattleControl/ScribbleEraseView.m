@@ -25,6 +25,7 @@
 #import "ScribbleEraseView.h"
 #import "Scribble.h"
 #import "ScribCapControl.h"
+#import "TLogControlMacro.h"
 
 #define kEraseWidthAmplifyFactor    (4.0)
 float const TScribbleLineWidth = 4.0;

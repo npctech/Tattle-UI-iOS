@@ -28,6 +28,7 @@
 #import "MovableEditorView.h"
 #import "CommonMacro.h"
 #import "UIImage+GiffAnimation.h"
+#import "TLogControlMacro.h"
 
 enum{
     eBorderEdgeInsetTop = 40,

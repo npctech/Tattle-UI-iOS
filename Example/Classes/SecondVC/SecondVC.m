@@ -23,6 +23,7 @@
  */
 
 #import "SecondVC.h"
+#import "TLogControlMacro.h"
 
 @interface SecondVC ()
 
