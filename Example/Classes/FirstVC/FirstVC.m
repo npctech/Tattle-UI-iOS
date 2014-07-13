@@ -24,6 +24,7 @@
 
 #import "FirstVC.h"
 #import "SecondVC.h"
+#import "TLogControlMacro.h"
 
 @interface FirstVC ()
 
@@ -61,7 +62,7 @@
 
 -(IBAction)secondButtonFired:(id)sender
 {
-    NSLog(@"Second Button Fired");
+    TLog(@"Second Button Fired");
     SecondVC *secondVC = [[SecondVC alloc] init];
     [self.navigationController pushViewController:secondVC animated:YES];
 }

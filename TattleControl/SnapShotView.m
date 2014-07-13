@@ -28,6 +28,7 @@
 #import "MovableEditorView.h"
 #import "CommonMacro.h"
 #import "UIImage+GiffAnimation.h"
+#import "TLogControlMacro.h"
 
 enum{
     eBorderEdgeInsetTop = 40,
@@ -248,7 +249,7 @@ CGFloat const GifAnimationDuration = 3.4;
         scale = [[UIScreen mainScreen] scale];
     }
 #endif
-    NSLog(@"Screen scale %f", scale);
+    TLog(@"Screen scale %f", scale);
     return scale;
 }
 

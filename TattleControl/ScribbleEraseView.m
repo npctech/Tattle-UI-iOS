@@ -25,6 +25,7 @@
 #import "ScribbleEraseView.h"
 #import "Scribble.h"
 #import "ScribCapControl.h"
+#import "TLogControlMacro.h"
 
 #define kEraseWidthAmplifyFactor    (4.0)
 float const TScribbleLineWidth = 4.0;
@@ -202,13 +203,13 @@ float const TScribbleLineWidth = 4.0;
         }
     }
     else {
-        NSLog(@"ended scribb, object not found in scrib show view!\n");
+        TLog(@"ended scribb, object not found in scrib show view!\n");
     }
     [self setNeedsDisplay];
 }
 
 - (void) cancelTouchPoint:(CGPoint)point forTouch:(UITouch *)touch AndEvent:(UIEvent *) event {
-	NSLog(@"Cancelled touch with point X=%.2f and y=%.2f \n", point.x, point.y);
+	TLog(@"Cancelled touch with point X=%.2f and y=%.2f \n", point.x, point.y);
 }
 
 -(void) outOfBounds:(CGPoint)point forTouch:(UITouch*)touch andEvent:(UIEvent*)event
@@ -257,7 +258,7 @@ float const TScribbleLineWidth = 4.0;
     CGPoint tPt = [touch locationInView: self];
     if (!(CGRectContainsPoint(self.bounds, tPt)))
     {
-        NSLog(@"Out of bounds");
+        TLog(@"Out of bounds");
         [self outOfBounds:tPt forTouch:touch andEvent:event];
         return;
     }
