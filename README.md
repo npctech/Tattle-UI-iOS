@@ -50,7 +50,7 @@ self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 * Podfile 
 ```ruby
 platform :ios, '6.0'
-pod 'Tattle-UI-iOS', '~> 1.0.1'
+pod 'Tattle-UI-iOS', '~> 1.0.2'
 ```
 * Enable Tattle-UI control by adding below line in "AppDelegate.m". `#import "TattleControl.h"`
 * Invoke `enableTattleToWindow:` method, after main window creation.
@@ -90,7 +90,7 @@ TattleControl.sharedControl().enableTattleToWindow(self.window)
 * Podfile 
 ```ruby
 platform :ios, '6.0'
-pod 'Tattle-UI-iOS', '~> 1.0.1'
+pod 'Tattle-UI-iOS', '~> 1.0.2'
 ```
 * Include following header files into `AppModule-Bridging-Header.h`
 ```ruby
