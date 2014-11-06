@@ -10,6 +10,8 @@ writes paragraphs to explain a simple UI misalignment when they test.
 Tattle-UI solves this problem by providing a simple mechanism to get UI feedback
 from testers. 
 
+For Android version, please refer to https://github.com/npctech/Tattle-UI-Android
+
 ## What do you see on your app
 
 After integration, Tattle-UI library adds a floating button on every screen. 
