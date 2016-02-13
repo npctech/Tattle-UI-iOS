@@ -48,7 +48,7 @@ self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 [[TattleControl sharedControl] enableTattleToWindow:self.window]; 
 ```
 
-### From Cocoapods
+### From CocoaPods
 * Podfile 
 ```ruby
 platform :ios, '6.0'
@@ -88,7 +88,7 @@ self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 TattleControl.sharedControl().enableTattleToWindow(self.window)
 ```
 
-### From Cocoapods
+### From CocoaPods
 * Podfile 
 ```ruby
 platform :ios, '6.0'
